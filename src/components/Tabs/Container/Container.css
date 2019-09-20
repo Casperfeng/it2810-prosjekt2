@@ -1,0 +1,17 @@
+.pane{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hBox{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.vBox{
+  display: flex;
+  flex-flow: column nowrap;
+}
+.text{
+  white-space: pre;
+}
