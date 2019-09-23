@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 
 import Header from './components/Header/Header';
-import Tabs from './components/Tabs/Tabs';
+import Container from './components/Container/Container.js';
 
 
 function App() {
@@ -62,13 +62,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Tabs 
+      <Container
       svg = {svg}
       poem = {poem}
       audio = {audio}
-      svgIndex = {svgIndex}
-      poemIndex = {poemIndex}
-      audioIndex = {audioIndex}
       onTabIndexChanged = {setTabIndex}
       />  
     </div>
