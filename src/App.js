@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 
 import Header from './components/Header/Header';
-import Tabs from './components/Tabs/Tabs';
+import Container from './components/Container/Container.js';
 
 
 function App() {
@@ -50,8 +50,6 @@ function App() {
         setPoems(newPoems);})
     } else
       setPoem(poems[poemIndex][tabIndex])
-      const categories = ["cat", "dog", "love"];
-      console.log("media/poems/" + categories[poemIndex] + (tabIndex + 1) + ".json")
   }, [poemIndex, tabIndex])
 
   useEffect(() => {
@@ -62,13 +60,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Tabs 
+      <Container
       svg = {svg}
       poem = {poem}
       audio = {audio}
-      svgIndex = {svgIndex}
-      poemIndex = {poemIndex}
-      audioIndex = {audioIndex}
       onTabIndexChanged = {setTabIndex}
       />  
     </div>
