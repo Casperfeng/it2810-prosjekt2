@@ -50,8 +50,6 @@ function App() {
         setPoems(newPoems);})
     } else
       setPoem(poems[poemIndex][tabIndex])
-      const categories = ["cat", "dog", "love"];
-      console.log("media/poems/" + categories[poemIndex] + (tabIndex + 1) + ".json")
   }, [poemIndex, tabIndex])
 
   useEffect(() => {
