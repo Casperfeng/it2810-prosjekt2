@@ -8,13 +8,13 @@
 .bar {
   transition: 0.3s;
   margin-top: 5px;
-  background-color: black;
+  background-color: white;
   width: 60px;
   height: 10px;
 }
 
 .event1{
-  transform: rotate(-45deg) translate(-10px, 10px);
+  transform: rotate(-45deg) translate(-11px, 10px);
 }
 
 .event2{
@@ -22,5 +22,5 @@
 }
 
 .event3{
-  transform: rotate(45deg) translate(-10px, -10px);
+  transform: rotate(45deg) translate(-11px, -10px);
 }
