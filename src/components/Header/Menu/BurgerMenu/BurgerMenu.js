@@ -3,6 +3,7 @@ import './BurgerMenu.css';
 
 export default function BurgerMenu(props) {
   //brukes til å 'triggere' burgermeny animasjonen
+
   const triggerAnimation = props.clicked ? 'event' : '';
   return (
     <div className='burgermenu'>
