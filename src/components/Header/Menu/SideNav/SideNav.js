@@ -4,7 +4,6 @@ import './SideNav.css';
 export default function SideNav(props) {
   return (
     <div className='sidenav'>
-
       <div className='menu-item'>Bilder</div>
       <p className='menu-option' onClick={() => props.onSvgIndexChanged(0)}>Høst</p>
       <p className='menu-option' onClick={() => props.onSvgIndexChanged(1)} > Sommer</p>
