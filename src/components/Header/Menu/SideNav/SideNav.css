@@ -1,31 +1,53 @@
 .sidenav {
   z-index: 99;
   display: flex;
+  flex-direction: column;
   background-color: #222222;
   position: absolute;
   right: 0;
   overflow: auto;
   width: 300px;
-  height: 100%;
-  flex-direction: column;
+  height: 100vh;
 }
 
-.menu-item {
-  color: #d3d3d3;
+.category {
+  color: white;
   font-size: 28px;
-  padding-top: 30px;
+  padding-top: 50px;
   align-self: start;
-  margin-left: 70px;
+  margin-left: 55px;
+  font-weight: bold;
 }
 
-.menu-option {
+.option {
   font-size: 18px;
   margin: 10px auto 10px 70px;
   color: white;
 }
 
-.menu-option:hover {
+.option:hover {
   cursor: pointer;
-  color: orange;
-  text-decoration: underline;
+  color: #ffd520;
+  font-weight: bold;
+}
+
+.option-active {
+  color: #ffd520;;
+}
+
+.option-active::before {
+  content: "\2022";  /* Add bullet point */
+  font-weight: bold;
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; 
+  margin-left: -1em; 
+}
+
+.option-active:hover {
+  cursor: default;
+  font-weight: normal;
+}
+
+.empty-box {
+  padding: 25px;
 }
