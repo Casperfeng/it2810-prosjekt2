@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #222222;
+}
+
+.title {
+  margin-left: 20px;
+  color: white;
+}

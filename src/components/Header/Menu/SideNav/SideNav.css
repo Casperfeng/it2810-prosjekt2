@@ -1,0 +1,31 @@
+.sidenav {
+  z-index: 99;
+  display: flex;
+  background-color: #222222;
+  position: absolute;
+  right: 0;
+  overflow: auto;
+  width: 300px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.menu-item {
+  color: #d3d3d3;
+  font-size: 28px;
+  padding-top: 30px;
+  align-self: start;
+  margin-left: 70px;
+}
+
+.menu-option {
+  font-size: 18px;
+  margin: 10px auto 10px 70px;
+  color: white;
+}
+
+.menu-option:hover {
+  cursor: pointer;
+  color: orange;
+  text-decoration: underline;
+}

@@ -1,0 +1,31 @@
+.tab {
+  font-size: 20px;
+  color: rgb(54, 96, 124);
+  background-color: rgb(223, 243, 255);
+  border-left: 1px;
+  border-right: 1px;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-style: solid;
+  border-color: white;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.tab:hover {
+  background-color: rgb(170, 208, 231)
+}
+
+.tabs-container {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.active-tab {
+  background-color: white;
+}
+
+.active-tab:hover {
+  background-color: white;
+}
