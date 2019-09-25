@@ -69,6 +69,7 @@ function App() {
         poem={poem}
         audio={audio}
         onTabIndexChanged={setTabIndex}
+        tabIndex={tabIndex}
       />
     </div>
   );
