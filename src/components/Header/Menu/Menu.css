@@ -1,5 +1,8 @@
 .menu {
   display: flex;
-  width: 77px;
+  width: 215px;
   cursor: pointer;
+}
+.burgerMenuContainer {
+  display: flex;
 }

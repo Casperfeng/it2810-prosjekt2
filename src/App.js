@@ -15,6 +15,8 @@ function App() {
   const [poemIndex, setPoemIndex] = useState(0);
   const [audioIndex, setAudioIndex] = useState(0);
   const [tabIndex, setTabIndex] = useState(0);
+  const [historySize, setHistorySize] = useState(0);
+  const [historyIndex, setHistoryIndex] = useState(0);
 
   useEffect(() => {
     if (svgs[svgIndex][tabIndex] === "") {
@@ -54,16 +56,55 @@ function App() {
   }, [poemIndex, poems, tabIndex])
 
   useEffect(() => {
-    const categories = ["japanese", "laugh", "music"]
+    const categories = ["japanese", "laugh", "music"] 
     setAudio("media/sounds/" + categories[audioIndex] + (tabIndex + 1) + ".mp3");
   }, [audioIndex, tabIndex])
+
+  useEffect(() => {
+    let data = [svgIndex, poemIndex, audioIndex,tabIndex].join();
+    //If new data is found, add it to undostack
+    if (sessionStorage.getItem("history" + historyIndex) != data){
+      let size = historyIndex + 1;
+      setHistoryIndex(size);
+      setHistorySize(size);
+      sessionStorage.setItem("history" + size, [svgIndex,poemIndex,audioIndex,tabIndex].join());
+    }
+  }, [svgIndex, poemIndex, audioIndex, tabIndex])
+
+  const handleUndo = () => {
+    if (historyIndex > 1)
+      updateHistory(historyIndex - 1);
+  }
+
+  const handleRedo = () => {
+    if (historyIndex < historySize)
+      updateHistory(historyIndex + 1);
+  }
+
+  const updateHistory = (newIndex) => {
+    setHistoryIndex(newIndex)
+    let history = sessionStorage.getItem("history" + newIndex);
+    let indexes = history.split(",").map(e => parseInt(e));
+    setSvgIndex(indexes[0]);
+    setPoemIndex(indexes[1]);
+    setAudioIndex(indexes[2]);
+    setTabIndex(indexes[3]);
+  }
+
 
   return (
     <div className="App">
       <Header
+        svgIndex={svgIndex}
+        poemIndex={poemIndex}
+        audioIndex={audioIndex}
         onSvgIndexChanged={setSvgIndex}
         onPoemIndexChanged={setPoemIndex}
-        onAudioIndexChanged={setAudioIndex} />
+        onAudioIndexChanged={setAudioIndex} 
+        handleUndo = {handleUndo}
+        handleRedo = {handleRedo}
+        historyIndex = {historyIndex}
+        historySize = {historySize}/>
       <Container
         svg={svg}
         poem={poem}
