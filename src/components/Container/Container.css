@@ -22,7 +22,7 @@
   width: 100%;
   height: 100%;
   border-radius: 25px;
-  padding: 10px;
+  padding: 50px 10px 50px 10px;
   box-sizing: border-box;
   background-color: rgb(223, 243, 255);
 }
@@ -31,7 +31,6 @@
   grid-area: svg;
   width: 100%;
   height: auto;
-  max-width: 60vh;
   align-items: center;
   background-color: rgb(223, 243, 255);
   border-radius: 25px;
@@ -44,22 +43,29 @@
   border-radius: 25px;
 }
 
+/* All screens with landscape orientation */
 @media only screen and (orientation: landscape) {
-  .container{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto 30px;
-    gap: 10px;
+  .container {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 40px;
     grid-template-areas:
       "svg poem"
       "svg audio";
-    place-items: center;
+  }
+
+  .poem-container {
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  #svg {
+    width: 60vh;
   }
 }
-@media only screen and (max-width: 800px){
-  .poem{
-    white-space: pre-wrap;
-    font-size: 3.5vmin;
-    margin: auto;
+
+/* Pad and Desktop */
+@media only screen and (min-width: 600px){
+  .poem {
+    font-size: 3.2vmin;
   }
 }
