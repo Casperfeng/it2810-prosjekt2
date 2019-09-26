@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="menu"
+>
+  <div
+    className="historymenu"
+  >
+    <svg
+      className="historyBtn"
+    >
+      <polygon
+        fill="#444444"
+        points="25,15 25,22 41,22 41,38 25,38 25,45 5,30"
+      />
+    </svg>
+    <svg
+      className="historyBtn"
+    >
+      <polygon
+        fill="#444444"
+        points="20,15 20,22 4,22 4,38 20,38 20,45 40,30"
+      />
+    </svg>
+  </div>
+  <div
+    className="burgerMenuContainer"
+    onClick={[Function]}
+  >
+    <div
+      className="burgermenu"
+    >
+      <div
+        className="bar 1"
+      />
+      <div
+        className="bar 2"
+      />
+      <div
+        className="bar 3"
+      />
+    </div>
+  </div>
+</div>
+`;

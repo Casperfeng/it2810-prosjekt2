@@ -1,0 +1,12 @@
+.historymenu {
+  width: 140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.historyBtn {
+  height: 60px;
+  width: 45px;
+}

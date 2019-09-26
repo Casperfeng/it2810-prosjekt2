@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when clicked 1`] = `
+<div
+  className="burgermenu"
+>
+  <div
+    className="bar event1"
+  />
+  <div
+    className="bar event2"
+  />
+  <div
+    className="bar event3"
+  />
+</div>
+`;
+
+exports[`renders correctly when unclicked 1`] = `
+<div
+  className="burgermenu"
+>
+  <div
+    className="bar 1"
+  />
+  <div
+    className="bar 2"
+  />
+  <div
+    className="bar 3"
+  />
+</div>
+`;

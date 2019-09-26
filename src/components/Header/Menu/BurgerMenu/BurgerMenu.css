@@ -1,5 +1,5 @@
 .burgermenu {
-  z-index: 150;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,14 +7,15 @@
 
 .bar {
   transition: 0.3s;
-  margin-top: 5px;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
   background-color: white;
-  width: 60px;
-  height: 10px;
+  width: 40px;
+  height: 5px;
 }
 
 .event1{
-  transform: rotate(-45deg) translate(-11px, 10px);
+  transform: rotate(-45deg) translate(-6px, 8px);
 }
 
 .event2{
@@ -22,5 +23,5 @@
 }
 
 .event3{
-  transform: rotate(45deg) translate(-11px, -10px);
+  transform: rotate(45deg) translate(-6px, -8px);
 }
