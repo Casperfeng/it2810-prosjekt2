@@ -6,15 +6,23 @@ import Container from './components/Container/Container.js';
 
 
 function App() {
+  const loadCategories = () => {
+    const data = localStorage.getItem("category");
+    if (data === null)
+      return [0,0,0,0]
+    return data.split(",").map(e => parseInt(e));
+  }
+  const categories = loadCategories();
+
   const [svg, setSvg] = useState("");
   const [poem, setPoem] = useState("");
   const [audio, setAudio] = useState("");
   const [svgs, setSvgs] = useState([["", "", "", ""], ["", "", "", ""], ["", "", "", ""]]);
   const [poems, setPoems] = useState([["", "", "", ""], ["", "", "", ""], ["", "", "", ""]]);
-  const [svgIndex, setSvgIndex] = useState(0);
-  const [poemIndex, setPoemIndex] = useState(0);
-  const [audioIndex, setAudioIndex] = useState(0);
-  const [tabIndex, setTabIndex] = useState(0);
+  const [svgIndex, setSvgIndex] = useState(categories[0]);
+  const [poemIndex, setPoemIndex] = useState(categories[1]);
+  const [audioIndex, setAudioIndex] = useState(categories[2]);
+  const [tabIndex, setTabIndex] = useState(categories[3]);
   const [historySize, setHistorySize] = useState(0);
   const [historyIndex, setHistoryIndex] = useState(0);
 
@@ -67,9 +75,10 @@ function App() {
       let size = historyIndex + 1;
       setHistoryIndex(size);
       setHistorySize(size);
-      sessionStorage.setItem("history" + size, [svgIndex, poemIndex, audioIndex, tabIndex].join());
+      sessionStorage.setItem("history" + size, data);
     }
-  }, [svgIndex, poemIndex, audioIndex, tabIndex, historyIndex])
+    localStorage.setItem("category", data);
+  }, [svgIndex, poemIndex, audioIndex, tabIndex])
 
   const handleUndo = () => {
     if (historyIndex > 1)
