@@ -32,15 +32,15 @@
 }
 
 .option-active {
-  color: #ffd520;;
+  color: #ffd520;
 }
 
 .option-active::before {
-  content: "\2022";  /* Add bullet point */
+  content: '\2022'; /* Add bullet point */
   font-weight: bold;
   display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; 
-  margin-left: -1em; 
+  width: 1em;
+  margin-left: -1em;
 }
 
 .option-active:hover {
