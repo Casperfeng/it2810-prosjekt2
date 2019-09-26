@@ -56,20 +56,20 @@ function App() {
   }, [poemIndex, poems, tabIndex])
 
   useEffect(() => {
-    const categories = ["japanese", "laugh", "music"] 
+    const categories = ["japanese", "laugh", "music"]
     setAudio("media/sounds/" + categories[audioIndex] + (tabIndex + 1) + ".mp3");
   }, [audioIndex, tabIndex])
 
   useEffect(() => {
-    let data = [svgIndex, poemIndex, audioIndex,tabIndex].join();
+    let data = [svgIndex, poemIndex, audioIndex, tabIndex].join();
     //If new data is found, add it to undostack
-    if (sessionStorage.getItem("history" + historyIndex) != data){
+    if (sessionStorage.getItem("history" + historyIndex) !== data) {
       let size = historyIndex + 1;
       setHistoryIndex(size);
       setHistorySize(size);
-      sessionStorage.setItem("history" + size, [svgIndex,poemIndex,audioIndex,tabIndex].join());
+      sessionStorage.setItem("history" + size, [svgIndex, poemIndex, audioIndex, tabIndex].join());
     }
-  }, [svgIndex, poemIndex, audioIndex, tabIndex])
+  }, [svgIndex, poemIndex, audioIndex, tabIndex, historyIndex])
 
   const handleUndo = () => {
     if (historyIndex > 1)
@@ -100,11 +100,11 @@ function App() {
         audioIndex={audioIndex}
         onSvgIndexChanged={setSvgIndex}
         onPoemIndexChanged={setPoemIndex}
-        onAudioIndexChanged={setAudioIndex} 
-        handleUndo = {handleUndo}
-        handleRedo = {handleRedo}
-        historyIndex = {historyIndex}
-        historySize = {historySize}/>
+        onAudioIndexChanged={setAudioIndex}
+        handleUndo={handleUndo}
+        handleRedo={handleRedo}
+        historyIndex={historyIndex}
+        historySize={historySize} />
       <Container
         svg={svg}
         poem={poem}

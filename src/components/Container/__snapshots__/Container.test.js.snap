@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Container correctly 1`] = `
+<div>
+  <div
+    className="tabs-container"
+  >
+    <button
+      className="tab "
+      onClick={[Function]}
+    >
+      1
+    </button>
+    <button
+      className="tab "
+      onClick={[Function]}
+    >
+      2
+    </button>
+    <button
+      className="tab "
+      onClick={[Function]}
+    >
+      3
+    </button>
+    <button
+      className="tab "
+      onClick={[Function]}
+    >
+      4
+    </button>
+  </div>
+  <div
+    className="container"
+  >
+    <svg
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      id="svg"
+      viewBox="0 0 100 100"
+    />
+    <div
+      className="poem-container"
+    >
+      <p
+        className="poem"
+      />
+    </div>
+    <audio
+      className="audio"
+      controls={true}
+      type="audio/mpeg"
+    />
+  </div>
+</div>
+`;
