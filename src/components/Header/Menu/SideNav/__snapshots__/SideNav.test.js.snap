@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders SideNav correctly 1`] = `
+<div
+  className="sidenav"
+>
+  <div
+    className="category"
+  >
+    Image
+  </div>
+  <p
+    className="option "
+    onClick={[Function]}
+  >
+    Autumn
+  </p>
+  <p
+    className="option "
+    onClick={[Function]}
+  >
+    Summer
+  </p>
+  <p
+    className="option "
+    onClick={[Function]}
+  >
+    Winter
+  </p>
+  <div
+    className="category"
+  >
+    Sound
+  </div>
+  <p
+    className="option "
+    onClick={[Function]}
+  >
+    Japanese
+  </p>
+  <p
+    className="option "
+    onClick={[Function]}
+  >
+    Laughter
+  </p>
+  <p
+    className="option "
+    onClick={[Function]}
+  >
+    Music
+  </p>
+  <div
+    className="category"
+  >
+    Poem
+  </div>
+  <p
+    className="option "
+    onClick={[Function]}
+  >
+    Cat
+  </p>
+  <p
+    className="option "
+    onClick={[Function]}
+  >
+    Dog
+  </p>
+  <p
+    className="option "
+    onClick={[Function]}
+  >
+    Love
+  </p>
+  <div
+    className="empty-box"
+  />
+</div>
+`;
