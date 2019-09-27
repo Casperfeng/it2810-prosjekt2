@@ -19,21 +19,20 @@ Nettsiden har et responsivt webdesign og er testet på ulike enheter i både lan
 
 For å få dette til brukte vi viewport, media queries, skalerende svg-bilder og fleksibelt layout til dette. Nettsiden er testet i FireFox og Chrome. Enheter som har blitt testet på:
 
-Phones:
+#### Mobil:
 * Samsung Galaxy S5, S6, S7 Edge, S8 og S9/S9+
 * iPhone 6/7/8, X/XS og 6/7/8 Plus
 
-Tablets:
+#### Tablets:
 * iPad
 * Kindle Fire HDX
 
-Desktops:
+#### Desktops:
 * Surface Book 2 13.5”
 * Macbook Pro 13”/15”
 * HP Spectre 15.6”
 
 Under utviklingen testet vi hyppig ved hjelp av inspector-vinduet i FireFox og Chrome. Her valgte vi ulike skjermstørrelser (forhåndsbestemte valg av nettleserne, f.eks. Samsung Galaxy S9) og byttet på orientasjonen. I tillegg hadde de valget “Responsive” der man kunne velge skjermstørrelser selv. Ved å markere de relevante delene av HTML-dokumentet kunne vi se hvordan f.eks. CSS Grid og Flexbox fungerte og om de fungerte som forventet. Her kunne vi også se om generert padding og margin var som forventet. Etter nettsiden var deployet åpnet vi den på våre fysiske enheter (blant annet mobilene, nettbrettene og pc-ene våre) i Default Browser, FireFox og Chrome.
-
 
 Container’s layout bruker CSS Grid for å plassere bildet, tekst og lyd-spilleren. Layoutet er forskjellig mellom landscape- og portrait-orientasjon (gjort med Media Queries). Grunnen til at vi brukte CSS Grid er fordi vi ønsket et to-dimensjonalt layout. I tillegg var det mer praktisk med tanke på forskjellig layouts ved landscape- og portrait-orientasjon. CSS Grid er dessuten mer leselig enn hardkodet CSS Flexbox.
 
@@ -56,12 +55,13 @@ Tidligere har forskjellen mellom klasse-baserte komponenter og funksjonelle komp
 
 Alle komponentene kommuniserer fram og tilbake med App-komponenten.
 
-BILDE HER
+### Hierarki diagram:
+![Alt text](./komponent-hierarki.png)
 
 ## Media Credits
 Creative Commons 4.0
 
-Bilders:
+Bilder:
 * https://www.svgrepo.com/svg/277761/snowman-cold
 * https://www.svgrepo.com/svg/211816/igloo
 * https://www.svgrepo.com/svg/36170/snowflake
@@ -74,11 +74,3 @@ Bilders:
 * https://www.svgrepo.com/svg/54362/rake
 * https://www.svgrepo.com/svg/200478/basket-pumpkin
 * https://www.svgrepo.com/svg/191989/witch-halloween
-
-Dikt:
-
-Lyd:
-
-
-## Credits
-
