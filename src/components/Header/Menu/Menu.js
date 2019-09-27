@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import HistoryMenu from './HistoryMenu/HistoryMenu';
 import BurgerMenu from './BurgerMenu/BurgerMenu';
 import SideNav from './SideNav/SideNav';
@@ -9,25 +9,29 @@ export default function Menu(props) {
   return (
     <>
       <div className='menu'>
-        <HistoryMenu 
-        handleUndo = {props.handleUndo}
-        handleRedo = {props.handleRedo}
-        historyIndex = {props.historyIndex}
-        historySize = {props.historySize}
+        <HistoryMenu
+          handleUndo={props.handleUndo}
+          handleRedo={props.handleRedo}
+          historyIndex={props.historyIndex}
+          historySize={props.historySize}
         />
-        <div className="burgerMenuContainer" onClick={() => setClicked(!clicked)}>
+        <div
+          className='burgerMenuContainer'
+          onClick={() => setClicked(!clicked)}
+        >
           <BurgerMenu clicked={clicked} />
         </div>
       </div>
-      {
-        clicked && <SideNav
+      {clicked && (
+        <SideNav
           svgIndex={props.svgIndex}
           poemIndex={props.poemIndex}
           audioIndex={props.audioIndex}
           onSvgIndexChanged={props.onSvgIndexChanged}
           onPoemIndexChanged={props.onPoemIndexChanged}
-          onAudioIndexChanged={props.onAudioIndexChanged} />
-      }
+          onAudioIndexChanged={props.onAudioIndexChanged}
+        />
+      )}
     </>
-  )
+  );
 }
