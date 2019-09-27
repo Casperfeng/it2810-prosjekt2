@@ -14,14 +14,14 @@
   height: 5px;
 }
 
-.event1{
+.event1 {
   transform: rotate(-45deg) translate(-6px, 8px);
 }
 
-.event2{
+.event2 {
   opacity: 0;
 }
 
-.event3{
+.event3 {
   transform: rotate(45deg) translate(-6px, -8px);
 }

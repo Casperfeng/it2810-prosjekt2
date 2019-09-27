@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './BurgerMenu.css';
 
 export default function BurgerMenu(props) {
@@ -11,5 +11,5 @@ export default function BurgerMenu(props) {
       <div className={`bar ${triggerAnimation}2`} />
       <div className={`bar ${triggerAnimation}3`} />
     </div>
-  )
+  );
 }
